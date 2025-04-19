@@ -1,1 +1,0 @@
--- This file can be used to set up any shared plugin configurations or utilities
