@@ -7,7 +7,7 @@ return {
 		-- LSP keymaps
 		lspconfig.pyright.setup({
 			capabilities = capabilities,
-			root_dir = lspconfig.util.root_pattern("setup.py", "requirements.txt"),
+			root_dir = lspconfig.util.root_pattern("setup.py", "main.py", "app.py", "requirements.txt"),
 			settings = {
 				python = {
 					analysis = {
