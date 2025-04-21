@@ -14,12 +14,16 @@ A fast, minimal Neovim setup with Lazy.nvim, LSP support, Treesitter, Telescope,
 ## Installation
 
 1. **Prerequisites**: Neovim >= 0.9, Git, Node.js (for some LSPs).
-2. **Clone** your config:
+2. Backup your existing Neovim config:
+   ```sh
+   mv ~/.config/nvim ~/.config/nvim.Bak
+   ```
+3. **Clone** your config:
    ```sh
    git clone https://github.com/rohitsx/nvim.git ~/.config/nvim
    ```
-3. **Start Neovim**. Lazy.nvim bootstraps itself and installs plugins.
-4. **Run** `:Lazy sync` to install or update plugins manually.
+4. **Start Neovim**. Lazy.nvim bootstraps itself and installs plugins.
+5. **Run** `:Lazy sync` to install or update plugins manually.
 
 ## Configuration
 
@@ -66,13 +70,13 @@ A fast, minimal Neovim setup with Lazy.nvim, LSP support, Treesitter, Telescope,
    })
    ```
 2. Add the LSP server to Mason's ensure_installed list in lua/lsp/mason.lua
-    ```lua
-    ensure_installed = {
-      "pyright",
-      "tsserver",
-      -- other servers
-    }
-    ```
+   ```lua
+   ensure_installed = {
+     "pyright",
+     "tsserver",
+     -- other servers
+   }
+   ```
 3. Restart Neovim; Mason will auto-install if configured.
 
 ## Keybindings
