@@ -14,7 +14,7 @@ return {
 				ensure_installed = {
 					"pyright",
 					"ts_ls",
-					"denols",
+					--					"denols",
 					"lua_ls",
 					"html",
 					"jsonls",
@@ -22,6 +22,7 @@ return {
 					"cssls",
 					"yamlls",
 					"svelte",
+					"intelephense",
 				},
 				automatic_installation = true,
 			})

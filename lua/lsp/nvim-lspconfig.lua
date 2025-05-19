@@ -11,6 +11,7 @@ return {
 		require("lsp.lang-server.cssls")
 		require("lsp.lang-server.yamlls")
 		require("lsp.lang-server.svelte")
+		require("lsp.lang-server.intelephense")
 
 		-- Diagnostic config
 		vim.diagnostic.config({
