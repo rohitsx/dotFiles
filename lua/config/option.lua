@@ -1,7 +1,7 @@
 -- General Options
 local opt = vim.opt
 
-vim.cmd("colorscheme retrobox")
+-- vim.cmd("colorscheme retrobox")
 
 opt.clipboard = "unnamedplus" -- Use system clipboard
 opt.number = true             -- Show line numbers
