@@ -4,8 +4,7 @@ A clean, dark-themed, and keyboard-centric Linux desktop environment. This repos
 
 The core components are **i3-gaps** for window management, **Kitty** as the terminal, and a highly-customized **Neovim** setup for development.
 
-![image](https://github.com/user-attachments/assets/5a23d550-e86b-4e51-b60a-2babde74441a)
-
+![image](https://github.com/user-attachments/assets/f00c965a-7ed6-49c8-982b-18640e94a128)
 
 ## Table of Contents
 
