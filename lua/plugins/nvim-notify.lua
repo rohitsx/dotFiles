@@ -5,10 +5,10 @@ return {
 		local notify = require("notify")
 
 		notify.setup({
-			stages = "static",
+			stages = "slide",
 			render = "wrapped-compact",
 			background_colour = "#1e1e2e",
-			timeout = 1200,
+			timeout = 800,
 			max_width = function()
 				return math.floor(vim.o.lines * 1.2)
 			end,
