@@ -1,0 +1,23 @@
+set $mod Mod4
+font pango:FiraCode Nerd Font 13
+
+floating_modifier $mod
+
+include ~/.config/i3/keybindings.conf
+include ~/.config/i3/appearance.conf
+include ~/.config/i3/app.conf
+
+# picom
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
+
+# redshift for night light
+exec --no-startup-id redshift -P
+
+# open kitty and chrome on boot
+# exec --no-startup-id kitty
+# exec --no-startup-id google-chrome-stable
+
+
+#wallpaper
+exec_always --no-startup-id feh --bg-scale ~/.dotFiles/.wallpaper/wallpaper.jpg
+
