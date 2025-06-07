@@ -1,8 +1,11 @@
-# My Dotfiles
+1# My Dotfiles
 
 A clean, dark-themed, and keyboard-centric Linux desktop environment. This repository contains the personal configuration files for my setup, focusing on efficiency and aesthetics.
 
 The core components are **i3-gaps** for window management, **Kitty** as the terminal, and a highly-customized **Neovim** setup for development.
+
+![image](https://github.com/user-attachments/assets/5a23d550-e86b-4e51-b60a-2babde74441a)
+
 
 ## Table of Contents
 
