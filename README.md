@@ -1,4 +1,4 @@
-1# My Dotfiles
+# My Dotfiles
 
 A clean, dark-themed, and keyboard-centric Linux desktop environment. This repository contains the personal configuration files for my setup, focusing on efficiency and aesthetics.
 
