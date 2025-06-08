@@ -47,7 +47,7 @@ return {
 				"prettier",
 				"stylua",
 				"black",
-				"php-cs-fixer",
+				-- "php-cs-fixer",
 			}
 
 			for _, formatter in ipairs(formatters) do

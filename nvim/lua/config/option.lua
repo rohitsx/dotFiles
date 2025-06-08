@@ -23,6 +23,10 @@ cmd([[
   highlight Normal       guibg=#2a2a2e guifg=#cdd6f4
   highlight NormalFloat  guibg=#2a2a2e
   highlight TermNormal   guibg=#2a2a2e
+highlight NormalNC     guibg=#2a2a2e guifg=#cdd6f4
+highlight SignColumn   guibg=#2a2a2e
+highlight LineNr       guibg=#2a2a2e guifg=#6c7086
+highlight CursorLineNr guibg=#2a2a2e guifg=#f5c2e7
 ]])
 
 opt.fillchars:append({ eob = " " })
