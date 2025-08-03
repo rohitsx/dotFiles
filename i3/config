@@ -1,5 +1,6 @@
 set $mod Mod4
-font pango:FiraCode Nerd Font 13
+font pango:FiraCode Nerd Font 8
+
 
 floating_modifier $mod
 
@@ -14,9 +15,12 @@ exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id redshift -P
 
 # open kitty and chrome on boot
-exec --no-startup-id kitty
 exec --no-startup-id google-chrome-stable
 
 
 #wallpaper
 exec_always --no-startup-id feh --bg-scale ~/.dotFiles/.wallpaper/wallpaper.jpg
+
+#set brightness to 0
+exec --no-startup-id brightnessctl set 1%
+

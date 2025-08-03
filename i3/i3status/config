@@ -1,0 +1,16 @@
+
+general {
+    output_format = "i3bar"
+    colors = true
+}
+
+order += "cpu_temp"
+order += "tztime local"
+
+cpu_temp {
+    format = "%output"
+}
+
+tztime local {
+    format = "%Y-%m-%d %H:%M:%S"
+}

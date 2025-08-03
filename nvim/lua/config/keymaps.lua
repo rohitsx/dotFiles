@@ -1,8 +1,10 @@
-local map = vim.keymap.set
+-- Use <C-j> and <C-k> to navigate completion menu when it's visible
+-- Falls back to normal <C-j>/<C-k> behavior when menu is not visible
+vim.keymap.set("i", "<C-j>", function()
+  return vim.fn.pumvisible() == 1 and "<C-n>" or "<C-j>"
+end, { expr = true, noremap = true })
 
-map("n", "<leader>w", "<cmd>write<cr>", { desc = "Save" })
-map("n", "<leader>q", ":q<CR>", { desc = "Quit Vim" })
-map("i", "<M-BS>", "<C-w>", { desc = "Delete previous word" })
-map("i", "<C-BS>", "<C-w>", { desc = "Delete previous word" })
-map("n", "<M-x>", '"_dd', { desc = "Delete line without storing" })
-map("n", "<leader>a", ":keepjumps normal! ggVG<cr>")
+vim.keymap.set("i", "<C-k>", function()
+  return vim.fn.pumvisible() == 1 and "<C-p>" or "<C-k>"
+end, { expr = true, noremap = true })
+
