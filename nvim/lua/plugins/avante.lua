@@ -6,19 +6,19 @@ return {
   event = "VeryLazy",
   version = false,
   opts = {
-    provider =  {
-        endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
-        model = "gemini-2.0-flash",
-        timeout = 30000,
-        context_window = 1048576,
-        use_ReAct_prompt = true,
-        extra_request_body = {
-          generationConfig = {
-            temperature = 0.75,
-          },
+    provider = {
+      endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
+      model = "gemini-2.0-flash",
+      timeout = 30000,
+      context_window = 1048576,
+      use_ReAct_prompt = true,
+      extra_request_body = {
+        generationConfig = {
+          temperature = 0.75,
+        },
       },
     },
-  }, 
+  },
   dependencies = {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
