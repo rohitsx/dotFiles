@@ -21,6 +21,14 @@ vim.opt.expandtab = true
 -- Show absolute line numbers on the left side of the window
 vim.opt.number = true
 
--- Set the popup menu (completion suggestions) height to show a maximum of 15 items
+-- Set the popup menu height to show a maximum of 15 items
 -- vim.o.pumheight = 15
 
+-- use enter in popup to selecte item instead of default ctrl + y
+vim.keymap.set('i', '<CR>', function()
+  if vim.fn.pumvisible() == 1 then
+    return '<C-y>' -- Confirm the selected item in the popup menu
+  else
+    return '<CR>' -- Normal Enter behavior (insert newline)
+  end
+end, { expr = true, noremap = true, silent = true })

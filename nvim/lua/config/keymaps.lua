@@ -1,6 +1,10 @@
 local map = vim.keymap.set
 
 
+map("n", "<leader>w", "<cmd>write<cr>", { desc = "Save" })
+map("n", "<leader>q", ":q<CR>", { desc = "Quit Vim" })
+
+
 map("i", "\"", "\"\"<Left>")
 map("i", "'", "''<Left>")
 map("i", "(", "()<Left>")
