@@ -7,7 +7,7 @@ return {
 	config = function()
 		vim.opt.termguicolors = true
 		vim.keymap.set("n", "<leader>e", function()
-			api.tree.toggle({ focus = true })
+			vim.api.tree.toggle({ focus = true })
 		end, { desc = "Toggle NvimTree" })
 
 		local function my_on_attach(bufnr)

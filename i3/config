@@ -14,10 +14,6 @@ exec --no-startup-id picom --config ~/.config/picom/picom.conf
 # redshift for night light
 exec --no-startup-id redshift -P
 
-# open kitty and chrome on boot
-exec --no-startup-id google-chrome-stable
-
-
 #wallpaper
 exec_always --no-startup-id feh --bg-scale ~/.dotFiles/.wallpaper/wallpaper.jpg
 

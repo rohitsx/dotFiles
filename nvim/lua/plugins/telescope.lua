@@ -24,9 +24,15 @@ return {
     vim.keymap.set("n", "<leader>fh", require('telescope.builtin').help_tags)
     vim.keymap.set("n", "<leader>fg", require('telescope.builtin').live_grep)
     vim.keymap.set("n", "<leader>p", require('telescope.builtin').find_files)
-    vim.keymap.set("n", "<leader>vi", function()
+    vim.keymap.set("n", "<leader>fv", function()
       require('telescope.builtin').find_files {
         cwd = vim.fn.stdpath("config") }
+    end)
+    vim.keymap.set("n", "<leader>fx", function()
+      require('telescope.builtin').find_files {
+        cwd = "/home/rohit/x",
+        find_command = { "fd", "--type", "d", "--max-depth", "1" }
+      }
     end)
   end
 }

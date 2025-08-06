@@ -14,13 +14,14 @@ return {
     },
     config = function()
       -- local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      local lspconfig = require("lspconfig")
 
-      require("lspconfig").lua_ls.setup {}
-      require("lspconfig").ts_ls.setup {}
-      require("lspconfig").pyright.setup {}
-      require("lspconfig").stylelint_lsp.setup { }
-      require("lspconfig").svelte.setup { }
-      require("lspconfig").tailwindcss.setup{ }
+      lspconfig.ts_ls.setup {}
+      lspconfig.lua_ls.setup {}
+      lspconfig.pyright.setup {}
+      lspconfig.stylelint_lsp.setup {}
+      lspconfig.svelte.setup {}
+      lspconfig.tailwindcss.setup {}
 
       -- Format current buffer with LSP
       vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end)
