@@ -3,13 +3,16 @@ local map = vim.keymap.set
 
 map("n", "<leader>w", "<cmd>write<cr>", { desc = "Save" })
 map("n", "<leader>q", ":q<CR>", { desc = "Quit Vim" })
+map("n", "<leader>a", ":keepjumps normal! ggVG<cr>")
 
 
-map("i", "\"", "\"\"<Left>")
-map("i", "'", "''<Left>")
-map("i", "(", "()<Left>")
-map("i", "[", "[]<Left>")
-map("i", "{", "{}<Left>")
+-- Yank to clipboard
+map("v", "Y", '"+y')
+
+
+-- Select Whole File
+map("v", "<leader>a", "ggVG", { desc = "Select all" })
+
 
 -- Auto-insert closing brace on newline
 map("i", "{<CR>", "{<CR>}<Esc>O")
@@ -34,3 +37,6 @@ map('n', '<A-l>', '<cmd>vertical resize +2<CR>', opts) -- expand horizontally
 map('n', '<A-j>', '<cmd>resize -2<CR>', opts)          -- shrink vertically
 map('n', '<A-k>', '<cmd>resize +2<CR>', opts)          -- expand vertically
 map('n', '<A-=>', '<C-w>=', opts)                      -- equalize window sizes
+
+
+
