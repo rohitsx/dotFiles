@@ -22,6 +22,7 @@ return {
       lspconfig.stylelint_lsp.setup {}
       lspconfig.svelte.setup {}
       lspconfig.tailwindcss.setup {}
+      lspconfig.bashls.setup {}
 
       -- Format current buffer with LSP
       vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end)
