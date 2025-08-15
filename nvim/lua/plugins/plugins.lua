@@ -5,15 +5,6 @@ return {
   { "wakatime/vim-wakatime" },
 
   {
-    -- A startup screen plugin with a customizable dashboard
-    'goolord/alpha-nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-      require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
-    end
-  },
-
-  {
     -- A statusline plugin written in Lua with rich customization
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" }, -- Adds icons to the statusline

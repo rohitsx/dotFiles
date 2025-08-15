@@ -28,3 +28,5 @@ gc() {
 
 alias ga='git add .'
 alias gs='lazygit'
+alias gp='git push'
+
