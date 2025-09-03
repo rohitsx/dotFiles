@@ -7,7 +7,7 @@ return {
 	config = function()
 		vim.opt.termguicolors = true
 		vim.keymap.set("n", "<leader>e", function()
-      require("nvim-tree.api").tree.toggle({ focus = true })
+			require("nvim-tree.api").tree.toggle({ focus = true })
 		end, { desc = "Toggle NvimTree" })
 
 		local function my_on_attach(bufnr)
@@ -42,6 +42,7 @@ return {
 			renderer = {
 				group_empty = true,
 				highlight_git = true, -- highlight git status
+				highlight_modified = "all",
 				icons = {
 					show = {
 						file = true,
@@ -50,6 +51,7 @@ return {
 						git = true,
 					},
 					glyphs = {
+						modified = "",
 						git = {
 							unstaged = "|",
 							staged = "",
@@ -61,6 +63,11 @@ return {
 						},
 					},
 				},
+			},
+			modified = {
+				enable = true,
+				show_on_dirs = true,
+				show_on_open_dirs = true,
 			},
 			git = {
 				enable = true,

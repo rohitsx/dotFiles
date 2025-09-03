@@ -22,8 +22,24 @@ require("lazy").setup({
   spec = {
     { import = "plugins" },
     { import = "lsp" },
-  },
-  install = { colorscheme = { "habamax" } },
+    {
+      "folke/tokyonight.nvim",
+      priority = 1000,
+      config = function()
+        require("tokyonight").setup({
+          style = "night",
+        })
+        local hour = tonumber(os.date("%H"))
+
+        -- Set colorscheme based on time
+        if hour >= 6 and hour < 18 then
+          vim.cmd.colorscheme("retrobox") -- Nighttime: 6 PM to 5:59 AM
+          vim.api.nvim_set_hl(0, "Normal", { bg = "#121212", fg = "#c0c0c0" })
+        else
+          vim.cmd.colorscheme("tokyonight") -- Nighttime: 6 PM to 5:59 AM
+        end
+      end,
+    } },
   checker = {
     enabled = false,
     concurrency = nil, ---@type number? set to 1 to check for updates very slowly
