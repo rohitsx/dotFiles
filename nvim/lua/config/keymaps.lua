@@ -31,15 +31,6 @@ map("n", "<A-j>", "<cmd>resize -2<CR>", opts)          -- shrink vertically
 map("n", "<A-k>", "<cmd>resize +2<CR>", opts)          -- expand vertically
 map("n", "<A-=>", "<C-w>=", opts)                      -- equalize window sizes
 
--- Use <Enter> to confirm item in popup instead of <C-y>
-map("i", "<CR>", function()
-  if vim.fn.pumvisible() == 1 then
-    return "<C-y>"
-  else
-    return "<CR>"
-  end
-end, { expr = true, noremap = true, silent = true })
-
 require("config.terminal")
 
 
@@ -134,6 +125,16 @@ end
 map("n", "gi", function()
   lsp_implementations_telescope()
 end, { desc = "Go to implementation" })
+
+map("n", "<leader>ai", function()
+  vim.lsp.buf.code_action({
+    apply = true,
+    context = {
+      only = { "source.addMissingImports.ts", "source.organizeImports.ts" },
+      diagnostics = {},
+    },
+  })
+end, { desc = "Add missing imports" })
 
 
 

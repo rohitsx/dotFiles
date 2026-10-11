@@ -120,5 +120,6 @@ return {
       })
     end,
   },
-  {"wlemuel/vim-tldr"}
+  {"wlemuel/vim-tldr"},
+  {'wakatime/vim-wakatime'}
 }

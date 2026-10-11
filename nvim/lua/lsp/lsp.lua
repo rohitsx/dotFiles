@@ -76,10 +76,36 @@ return {
         capabilities = capabilities,
         on_attach = on_attach,
         settings = {
-          typescript = { tsserver = { maxTsServerMemory = 4096 } },
-          javascript = { tsserver = { maxTsServerMemory = 4096 } },
+          typescript = {
+            tsserver = { maxTsServerMemory = 4096 },
+            preferences = {
+              includeCompletionsForModuleExports = true,
+              includeCompletionsForImportStatements = true,
+            },
+          },
+          javascript = {
+            tsserver = { maxTsServerMemory = 4096 },
+            preferences = {
+              includeCompletionsForModuleExports = true,
+              includeCompletionsForImportStatements = true,
+            },
+          },
         },
       })
+
+
+      -- Rust
+      setup_server("rust_analyzer", {
+        capabilities = capabilities,
+        on_attach = on_attach,
+        settings = {
+          ["rust-analyzer"] = {
+            cargo = { allFeatures = true },
+            checkOnSave = true,
+          },
+        },
+      })
+
 
       -- Other servers
       local other_servers = {

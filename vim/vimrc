@@ -1,12 +1,7 @@
 call plug#begin('~/.vim/plugged')
-Plug 'wakatime/vim-wakatime'
-
-
-call plug#begin('~/.vim/plugged')
+  Plug 'wakatime/vim-wakatime'
   Plug 'prabirshrestha/vim-lsp'
   Plug 'prabirshrestha/vim-lsp-settings'
-call plug#end()
-
 call plug#end()
 
 
